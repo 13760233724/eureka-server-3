@@ -1,0 +1,18 @@
+spring:
+    application:
+        name: eureka
+
+server:
+    port: 9093
+
+eureka:
+    instance:
+        hostname: agent3.com
+    client:
+        registerWithEureka: true
+        fetchRegistry: true
+        serviceUrl:
+            defaultZone: http://agent1.com:9091/eureka/,http://agent2.com:9092/eureka/
+    server:
+        waitTimeInMsWhenSyncEmpty: 0
+        enableSelfPreservation: false
